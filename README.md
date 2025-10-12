@@ -14,11 +14,12 @@ Required Arguments:
   -u, --url        Target URL
   -w, --wordlist   Path to wordlist file
 
-Filters:
+Options:
   -s, --status     Hide these status codes (ex: 401,404)
   -z, --size       Hide these sizes (ex: 1235,6755)
+  -t, --threads    Number of threads (default: 5, max: 20)
 
 Examples:
-  python3 fuzzer.py -u http://example.com -w wordlist.txt
-  python3 fuzzer.py -u http://example.com -w wordlist.txt -s 404
-  python3 fuzzer.py -u http://example.com -w wordlist.txt -z 6755
+  python3 fuzzer.py -u https://example.com -w wordlist.txt
+  python3 fuzzer.py -u https://example.com -w wordlist.txt -s 404 -t 10
+  python3 fuzzer.py -u https://example.com -w wordlist.txt -z 6755
